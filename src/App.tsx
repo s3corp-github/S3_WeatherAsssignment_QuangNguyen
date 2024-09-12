@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import CityCards from './components/card/CityCards'
 import CitySearchBar from './components/searchBar/CitySearchBar'
 import TemperatureSlider from './components/slider/TemperatureSlider'
+import RatioShown from './components/ratioShown/RatioShown'
 import { DEFAULT_FILTER } from './constant'
 import { fetchCityWeather } from './services'
 import { City } from './types'
@@ -37,6 +38,7 @@ function App() {
     <div className="weather-app">
       <CitySearchBar onSearch={onSearch} />
       <TemperatureSlider minTemp={filters.minTemp} onFilter={onFilter} />
+      <RatioShown cities={cities} citiesShown={citiesShown} />
       <CityCards cities={citiesShown} onRemove={onRemove} />
     </div>
   )

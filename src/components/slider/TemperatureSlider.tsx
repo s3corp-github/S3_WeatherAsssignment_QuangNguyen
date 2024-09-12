@@ -10,16 +10,17 @@ const TemperatureSlider = ({ minTemp, onFilter }: TemperatureSliderProps) => {
 
   return (
     <div className="slide-container">
-      <label htmlFor="slide">Warmer than:</label>
-      <input
-        id="slide"
-        type="range"
-        min="-20"
-        max="40"
-        value={minTemp}
-        onChange={handleSliderChange}
-      />
-      <span>{minTemp}°C</span>
+      <div>{minTemp}°C</div>
+      <div className='slide'>
+        <h4 className='label'>Warmer than:</h4>
+        <input
+          type="range"
+          min="-20"
+          max="40"
+          value={minTemp}
+          onChange={handleSliderChange}
+        />
+      </div>
     </div>
   )
 }
