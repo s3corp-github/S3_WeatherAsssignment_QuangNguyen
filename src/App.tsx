@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useMemo, useState } from 'react'
+import CityCards from './components/card/CityCards'
+import CitySearchBar from './components/searchBar/CitySearchBar'
+import TemperatureSlider from './components/slider/TemperatureSlider'
+import { DEFAULT_FILTER } from './constant'
+import { fetchCityWeather } from './services'
+import { City } from './types'
+import './weather-app.css'
 
 function App() {
+  const [cities, setCities] = useState<City[]>([])
+  const [filters, setFilters] = useState(DEFAULT_FILTER)
+
+  const onSearch = async (cityName: string) => {
+    try {
+      const newCity = await fetchCityWeather(cityName)
+      setCities(prevCities => [...prevCities, newCity])
+      setFilters(DEFAULT_FILTER)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const onRemove = (cityId: number) => {
+    setCities(prevCities => prevCities.filter(city => city.id !== cityId))
+  }
+
+  const onFilter = (minTemp: number) => {
+    setFilters({ minTemp: minTemp })
+  }
+
+  const citiesShown: City[] = useMemo(() => {
+    return cities.filter(city => city.temp >= filters.minTemp)
+  }, [cities, filters])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="weather-app">
+      <CitySearchBar onSearch={onSearch} />
+      <TemperatureSlider minTemp={filters.minTemp} onFilter={onFilter} />
+      <CityCards cities={citiesShown} onRemove={onRemove} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
