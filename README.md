@@ -1,6 +1,11 @@
 # Weather App
 
 Develop a weather app using React and TypeScript that allows users to search for cities and filter them by current temperature, using data from the OpenWeatherMap API.
+![Screenshot 2024-09-13 at 2 34 52 PM](https://github.com/user-attachments/assets/a2e86f68-228d-43de-bc99-ee124c3b81d8)
+
+## Test Coverage
+![Screenshot 2024-09-13 at 2 34 40 PM](https://github.com/user-attachments/assets/282c977b-77c0-45b5-b6c7-481fd58f55ac)
+
 
 ## Tech Stack
 
