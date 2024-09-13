@@ -1,46 +1,86 @@
-# Getting Started with Create React App
+# Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Develop a weather app using React and TypeScript that allows users to search for cities and filter them by current temperature, using data from the OpenWeatherMap API.
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+- **React.js**
+- **TypeScript**
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
+- **City Search:**
+  - Search for cities by name using a search bar.
+  - Fetch and display current weather data for the searched city.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Temperature Filtering:**
+  - Filter displayed cities based on their current temperature.
 
-### `npm test`
+- **API Integration:**
+  - Fetch weather data from OpenWeatherMap API.
+  - Handle responses, loading states, and errors.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (>=14.x.x)
+- Yarn or npm
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository:**
+   - Clone the repository using the command:
+     ```bash
+     git clone https://github.com/yourusername/weather-app.git
+     ```
 
-### `npm run eject`
+2. **Navigate to the project directory:**
+   - Change directory to the project folder:
+     ```bash
+     cd weather-app
+     ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. **Install dependencies:**
+   - Install all required dependencies:
+     ```bash
+     yarn install
+     # or
+     npm install
+     ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Running the App
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. **Start the development server:**
+   - Run the app locally:
+     ```bash
+     yarn start
+     # or
+     npm start
+     ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. **Open your browser:**
+   - Navigate to:
+     ```
+     http://localhost:3001
+     ```
 
-## Learn More
+### Testing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Run tests:**
+   - Execute tests to ensure code quality:
+     ```bash
+     yarn test
+     # or
+     npm test
+     ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
+
+- If you would like to contribute:
+  - Fork the repository.
+  - Submit a pull request with your changes.
+
+## License
+
+- This project is licensed under the MIT License.
