@@ -28,3 +28,10 @@
 .search-bar button:hover{
   filter: brightness(90%);
 }
+
+.search-bar button:disabled{
+  background-color: #48DCC0; 
+  color: rgba(255, 255, 255, 0.5); 
+  cursor: not-allowed;      
+  opacity: 0.6;  
+}

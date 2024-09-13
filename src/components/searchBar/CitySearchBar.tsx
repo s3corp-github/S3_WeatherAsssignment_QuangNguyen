@@ -3,7 +3,7 @@ import { SearchBarProps } from '../../types'
 import { AVAILABLE_CITY_NAMES } from '../../constant'
 import './search-bar.css'
 
-const SearchBar = ({ onSearch }: SearchBarProps) => {
+const SearchBar = ({ isLoading, onSearch }: SearchBarProps) => {
   const [cityName, setCityName] = useState<string>('')
 
   const handleSearch = () => {
@@ -39,7 +39,7 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
             <option key={index} value={name} />
           ))}
         </datalist>
-        <button onClick={handleSearch}>Search</button>
+        <button disabled={isLoading || !cityName} onClick={handleSearch}>Search</button>
       </div>
     </div>
   )

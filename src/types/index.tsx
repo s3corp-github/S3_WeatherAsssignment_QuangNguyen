@@ -17,6 +17,7 @@ export interface CityCardProps {
 }
 
 export interface SearchBarProps {
+  isLoading: boolean
   onSearch: (cityName: string) => void
 }
 
