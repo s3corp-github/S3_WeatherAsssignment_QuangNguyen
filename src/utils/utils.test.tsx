@@ -7,6 +7,10 @@ const MOCKED_DATA: WeatherResponse = {
   main: {
     temp: 18.79,
   },
+  coord: {
+    lat: 1,
+    lon: 2,
+  },
   wind: {
     speed: 2.29,
     deg: 150,

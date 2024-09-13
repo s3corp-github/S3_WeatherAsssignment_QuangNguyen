@@ -4,6 +4,7 @@ export interface City {
   temp: number
   windSpeed: number
   windDeg: number
+  pm10?: number
 }
 
 export interface CityCardsProps {
@@ -29,6 +30,11 @@ export interface TemperatureSliderProps {
 export interface WeatherResponse {
   id: number
   name: string
+  pm10?: number
+  coord: {
+    lat: number
+    lon: number
+  }
   main: {
     temp: number
   }

@@ -2,7 +2,7 @@ import { CityCardProps } from '../../types'
 import './city-card.css'
 
 function CityCard({ city, onRemove }: CityCardProps) {
-  const { id, name, temp, windSpeed, windDeg } = city
+  const { id, name, temp, windSpeed, pm10 } = city
 
   return (
     <div className="city-weather-card">
@@ -10,7 +10,7 @@ function CityCard({ city, onRemove }: CityCardProps) {
         <h2>
           {name}, {temp}°C
         </h2>
-        <p>PM 10: {windDeg}</p>
+        <p>PM 10: {pm10}</p>
         <p>Wind Speed: {windSpeed} m/s</p>
       </div>
       <button

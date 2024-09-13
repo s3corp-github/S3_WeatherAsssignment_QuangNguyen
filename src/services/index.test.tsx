@@ -1,5 +1,4 @@
 import { fetchCityWeather } from '../services/index'
-import { mapCityData } from '../utils'
 import { WeatherResponse } from '../types'
 
 jest.mock('../utils', () => ({
@@ -9,6 +8,10 @@ jest.mock('../utils', () => ({
 const mockWeatherResponse: WeatherResponse = {
   id: 4887398,
   name: 'Chicago',
+  coord: {
+    lat: 1,
+    lon: 2,
+  },
   main: {
     temp: 18.79,
   },
@@ -17,14 +20,6 @@ const mockWeatherResponse: WeatherResponse = {
     deg: 150,
   },
   cod: 200,
-}
-
-const expectedCityData = {
-  id: 4887398,
-  name: 'Chicago',
-  temp: 18.79,
-  windSpeed: 2.29,
-  windDeg: 150,
 }
 
 global.fetch = jest.fn(() =>

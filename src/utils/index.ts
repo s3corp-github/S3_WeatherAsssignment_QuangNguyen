@@ -6,6 +6,7 @@ export const mapCityData = (data: WeatherResponse): City => {
     name: data.name,
     temp: data.main.temp,
     windSpeed: data.wind.speed,
+    pm10: data.pm10,
     windDeg: data.wind.deg,
   }
 }
