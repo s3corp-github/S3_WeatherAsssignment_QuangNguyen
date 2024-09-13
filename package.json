@@ -19,8 +19,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --watchAll --env=jsdom",
+    "eject": "react-scripts eject",
+    "test:cov": "npm test -- --coverage --watchAll --env=jsdom"
   },
   "eslintConfig": {
     "extends": [

@@ -3,7 +3,7 @@ export interface City {
   name: string
   temp: number
   windSpeed: number
-  atTime: string
+  windDeg: number
 }
 
 export interface CityCardsProps {
@@ -34,6 +34,7 @@ export interface WeatherResponse {
   }
   wind: {
     speed: number
+    deg: number
   }
   cod: number
 }
