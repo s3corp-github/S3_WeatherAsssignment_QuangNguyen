@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import { SearchBarProps } from '../../types'
 import { AVAILABLE_CITY_NAMES } from '../../constant'
+import SearchButton from './SearchButton'
 import './search-bar.css'
 
 const SearchBar = ({ isLoading, onSearch }: SearchBarProps) => {
@@ -25,7 +26,7 @@ const SearchBar = ({ isLoading, onSearch }: SearchBarProps) => {
   return (
     <div className="search-bar">
       <h2>Choose a city</h2>
-      <div>
+      <div className="bar">
         <input
           type="text"
           id="city-input"
@@ -39,7 +40,11 @@ const SearchBar = ({ isLoading, onSearch }: SearchBarProps) => {
             <option key={index} value={name} />
           ))}
         </datalist>
-        <button disabled={isLoading || !cityName} onClick={handleSearch}>Search</button>
+        <SearchButton
+          cityName={cityName}
+          isLoading={isLoading}
+          handleSearch={handleSearch}
+        />
       </div>
     </div>
   )
