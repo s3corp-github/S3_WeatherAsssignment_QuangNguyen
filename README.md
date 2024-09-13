@@ -5,7 +5,7 @@ Develop a weather app using React and TypeScript that allows users to search for
 ![Screenshot 2024-09-13 at 2 34 52 PM](https://github.com/user-attachments/assets/a2e86f68-228d-43de-bc99-ee124c3b81d8)
 
 ## Test Coverage
-![Screenshot 2024-09-13 at 2 34 40 PM](https://github.com/user-attachments/assets/282c977b-77c0-45b5-b6c7-481fd58f55ac)
+![Screenshot 2024-09-13 at 2 37 50 PM](https://github.com/user-attachments/assets/bd861e6a-177f-454a-8b98-14bbf69c7715)
 
 
 ## Tech Stack
