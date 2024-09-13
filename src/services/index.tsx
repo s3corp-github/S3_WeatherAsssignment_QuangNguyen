@@ -1,7 +1,8 @@
 import { WeatherResponse } from '../types'
 import { mapCityData } from '../utils'
 
-const { REACT_APP_BASE_URL: BASE_URL, REACT_APP_API_KEY: API_KEY } = process.env
+const API_KEY = 'eec8a3e0755262349bb40afcf5f89203'
+const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'
 
 export const fetchCityWeather = async (cityName: string) => {
   const response = await fetch(
